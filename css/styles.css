@@ -1,0 +1,147 @@
+:root {
+  --primary: #174666;
+  --primary-transparent: #174666d7;
+  --secondary: #c65f5f;
+  --white: #fbfdff;
+  --black-transparent: #0610189d;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  background-color: var(--white);
+  background-image: url("../assets/imgs/debut-light.png");
+}
+
+.hamburger-icon {
+  position: fixed;
+  top: 2rem;
+  right: 1rem;
+  height: 1.5rem;
+  width: 8vw;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.hamburger-icon div {
+  margin-bottom: 8px;
+  border: 1.5px solid var(--secondary);
+  text-align: right;
+}
+.hamburger-icon div:nth-child(1) {
+  flex-basis: 100%;
+}
+.hamburger-icon div:nth-child(2) {
+  flex-basis: 50%;
+}
+.hamburger-icon div:nth-child(3) {
+  flex-basis: 70%;
+}
+
+.header {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-presentation {
+  width: 100%;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+}
+.header-presentation h1 {
+  font-weight: 300;
+  color: var(--primary);
+  flex: 100%;
+  padding: 0 2rem;
+  margin: 0.4rem 0;
+}
+.header-presentation .header-presentation__greet {
+  font-size: 3.75rem;
+}
+.header-presentation .header-presentation__greet span {
+  color: var(--secondary);
+}
+.header-presentation .header-presentation__name {
+  font-size: 2.5rem;
+  text-align: center;
+}
+.header-presentation .header-presentation__profession {
+  font-size: 2.2rem;
+  text-align: right;
+}
+
+.header-avatar {
+  margin-top: 4rem;
+}
+.header-avatar .header-avatar__circle {
+  border: 1px solid var(--primary);
+  border-radius: 100%;
+  width: 30vw;
+  height: 30vw;
+  overflow: hidden;
+}
+.header-avatar .header-avatar__circle img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.presentation {
+  position: relative;
+  background-image: linear-gradient(var(--primary-transparent), var(--primary-transparent)), url("../assets/imgs/eco.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 1rem 10rem 1rem;
+  transform: skew(0deg, -5deg);
+}
+.presentation .presentation-content {
+  transform: skew(0deg, 5deg);
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+.presentation .presentation-content .presentation-motivational {
+  color: var(--white);
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+.presentation .presentation-content button {
+  background-color: var(--secondary);
+  border: none;
+  font-family: inherit;
+  color: var(--white);
+  padding: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  box-shadow: 2px 2px 2px 2px var(--black-transparent);
+}
+
+.skills {
+  background-color: var(--white);
+  background-image: url("../assets/imgs/debut-light.png");
+  transform-origin: top right;
+  padding: 4rem 1rem 8rem 1rem;
+  transform: skew(0deg, 5deg);
+  margin-top: -4rem;
+  z-index: 1;
+}
+.skills .skills-content {
+  transform: skew(0deg, -5deg);
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */

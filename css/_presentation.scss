@@ -1,0 +1,36 @@
+.presentation {
+  position: relative;
+  background-image: linear-gradient(
+      var(--primary-transparent),
+      var(--primary-transparent)
+    ),
+    url("../assets/imgs/eco.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 1rem 10rem 1rem;
+  transform: skew(0deg, -5deg);
+
+  .presentation-content {
+    transform: skew(0deg, 5deg);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    .presentation-motivational {
+      color: var(--white);
+      font-size: 3.5rem;
+      font-weight: 300;
+    }
+    button {
+      background-color: var(--secondary);
+      border: none;
+      font-family: inherit;
+      color: var(--white);
+      padding: 1rem;
+      font-size: 2rem;
+      cursor: pointer;
+      margin-top: 2rem;
+      box-shadow: 2px 2px 2px 2px var(--black-transparent);
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.header {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-presentation {
+  width: 100%;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  h1 {
+    font-weight: 300;
+    color: var(--primary);
+    flex: 100%;
+    padding: 0 2rem;
+    margin: 0.4rem 0;
+  }
+
+  .header-presentation__greet {
+    font-size: 3.75rem;
+    span {
+      color: var(--secondary);
+    }
+  }
+  .header-presentation__name {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .header-presentation__profession {
+    font-size: 2.2rem;
+    text-align: right;
+  }
+}
+
+.header-avatar {
+  margin-top: 4rem;
+  .header-avatar__circle {
+    border: 1px solid var(--primary);
+    border-radius: 100%;
+    width: 30vw;
+    height: 30vw;
+    overflow: hidden;
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}

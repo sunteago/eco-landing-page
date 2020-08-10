@@ -1,0 +1,14 @@
+.skills {
+  background-color: var(--white);
+  background-image: url("../assets/imgs/debut-light.png");
+  transform-origin: top right;
+  padding: 4rem 1rem 8rem 1rem;
+  transform: skew(0deg, 5deg);
+  margin-top: -4rem;
+  z-index: 1;
+  .skills-content {
+    transform: skew(0deg, -5deg);
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+  }
+}

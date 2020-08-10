@@ -1,0 +1,26 @@
+:root {
+  --primary: #174666;
+  --primary-transparent: #174666d7;
+  --secondary: #c65f5f;
+  --white: #fbfdff;
+  --black-transparent: #0610189d;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  background-color: var(--white);
+  background-image: url("../assets/imgs/debut-light.png");
+}
+
+@import "nav";
+@import "header";
+@import "presentation";
+@import "skills";
