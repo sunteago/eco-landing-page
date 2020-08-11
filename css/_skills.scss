@@ -4,6 +4,7 @@
   transform-origin: top right;
   z-index: 1;
   @include section-container;
+  padding-bottom: 0;
   .skills-content {
     display: flex;
     flex-direction: column;

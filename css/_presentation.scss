@@ -1,5 +1,7 @@
 .presentation {
-  position: relative;
+  @include section-container;
+  @include diagonal-right-desc;
+  @include diagonal-right-asc;
   background-image: linear-gradient(
       var(--primary-transparent),
       var(--primary-transparent)
@@ -7,11 +9,9 @@
     url("../assets/imgs/eco.jpg");
   background-size: cover;
   background-position: center;
-  padding: 4rem 1rem 10rem 1rem;
-  transform: skew(0deg, -5deg);
+  padding: 8rem 0 6rem 0;
 
   .presentation-content {
-    transform: skew(0deg, 5deg);
     display: flex;
     text-align: center;
     flex-direction: column;

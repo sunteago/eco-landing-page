@@ -1,8 +1,8 @@
 .about-me {
-  transform: skew(0deg, -5deg);
   background: var(--primary);
   @include section-container;
-  padding-bottom: 0rem;
+  @include diagonal-right-desc;
+  padding: 7rem 0 0 0;
   .about-me-content {
     font-family: "Open Sans", sans-serif;
     padding: 1rem;
@@ -44,7 +44,15 @@
     font-weight: 300;
     font-size: 1.125rem;
     box-shadow: var(--shadow);
-    padding: 0.3rem 0.5rem;
+    width: 100%;
+    max-width: 300px;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      margin-right: 1rem;
+    }
   }
   .about-me__profile-social-networks {
     display: flex;

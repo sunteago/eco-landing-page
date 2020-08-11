@@ -6,6 +6,7 @@
   --white: #fbfdff;
   --black-transparent: #0610189d;
   --shadow: 2px 2px 2px 2px var(--black-transparent);
+  --background-url: url("../assets/imgs/debut-light.png");
 }
 
 *,
@@ -19,8 +20,9 @@
 body {
   font-family: Montserrat, sans-serif;
   background-color: var(--white);
-  background-image: url("../assets/imgs/debut-light.png");
+  background-image: var(--background-url);
   position: relative;
+  overflow-x: hidden;
 }
 
 .section-title {
@@ -29,11 +31,35 @@ body {
 }
 
 @mixin section-container {
-  padding: 4rem 0 8rem 0;
-  transform: skew(0deg, 5deg);
-  margin-top: -4rem;
-  > div {
-    transform: skew(0deg, -5deg);
+  position: relative;
+  padding: 3rem 0;
+}
+@mixin diagonal-right-desc {
+  &::before {
+    content: "";
+    background-color: var(--white);
+    background-image: var(--background-url);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200%;
+    transform: rotate(5deg);
+    transform-origin: bottom right;
+    height: 100px;
+  }
+}
+@mixin diagonal-right-asc {
+  &::after {
+    content: "";
+    background-color: var(--white);
+    background-image: var(--background-url);
+    position: absolute;
+    bottom: 0;
+    left: -1rem;
+    width: 200%;
+    transform: rotate(-5deg) translate(0, 100%);
+    transform-origin: left;
+    height: 100px;
   }
 }
 

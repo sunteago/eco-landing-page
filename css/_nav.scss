@@ -3,6 +3,7 @@
   top: 2rem;
   right: 1rem;
   height: 1.5rem;
+  z-index: 1000;
   width: 8vw;
   cursor: pointer;
   display: flex;
@@ -21,9 +22,16 @@
 
     &:nth-child(2) {
       flex-basis: 50%;
+      border-color: var(--primary);
     }
     &:nth-child(3) {
       flex-basis: 70%;
     }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .hamburger-icon {
+    display: none;
   }
 }

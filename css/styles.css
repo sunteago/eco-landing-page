@@ -6,6 +6,7 @@
   --white: #fbfdff;
   --black-transparent: #0610189d;
   --shadow: 2px 2px 2px 2px var(--black-transparent);
+  --background-url: url("../assets/imgs/debut-light.png");
 }
 
 *,
@@ -19,8 +20,9 @@
 body {
   font-family: Montserrat, sans-serif;
   background-color: var(--white);
-  background-image: url("../assets/imgs/debut-light.png");
+  background-image: var(--background-url);
   position: relative;
+  overflow-x: hidden;
 }
 
 .section-title {
@@ -63,7 +65,7 @@ body {
   }
 }
 .header {
-  min-height: 85vh;
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -117,14 +119,37 @@ body {
 
 .presentation {
   position: relative;
+  padding: 3rem 0;
   background-image: linear-gradient(var(--primary-transparent), var(--primary-transparent)), url("../assets/imgs/eco.jpg");
   background-size: cover;
   background-position: center;
-  padding: 4rem 1rem 10rem 1rem;
-  transform: skew(0deg, -5deg);
+  padding: 8rem 0 6rem 0;
+}
+.presentation::before {
+  content: "";
+  background-color: var(--white);
+  background-image: var(--background-url);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200%;
+  transform: rotate(5deg);
+  transform-origin: bottom right;
+  height: 100px;
+}
+.presentation::after {
+  content: "";
+  background-color: var(--white);
+  background-image: var(--background-url);
+  position: absolute;
+  bottom: 0;
+  left: -1rem;
+  width: 200%;
+  transform: rotate(-5deg) translate(0, 100%);
+  transform-origin: left;
+  height: 100px;
 }
 .presentation .presentation-content {
-  transform: skew(0deg, 5deg);
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -152,12 +177,9 @@ body {
   background-image: url("../assets/imgs/debut-light.png");
   transform-origin: top right;
   z-index: 1;
-  padding: 4rem 0 8rem 0;
-  transform: skew(0deg, 5deg);
-  margin-top: -4rem;
-}
-.skills > div {
-  transform: skew(0deg, -5deg);
+  position: relative;
+  padding: 3rem 0;
+  padding-bottom: 0;
 }
 .skills .skills-content {
   display: flex;
@@ -207,15 +229,22 @@ body {
 }
 
 .about-me {
-  transform: skew(0deg, -5deg);
   background: var(--primary);
-  padding: 4rem 0 8rem 0;
-  transform: skew(0deg, 5deg);
-  margin-top: -4rem;
-  padding-bottom: 0rem;
+  position: relative;
+  padding: 3rem 0;
+  padding: 7rem 0 0 0;
 }
-.about-me > div {
-  transform: skew(0deg, -5deg);
+.about-me::before {
+  content: "";
+  background-color: var(--white);
+  background-image: var(--background-url);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200%;
+  transform: rotate(5deg);
+  transform-origin: bottom right;
+  height: 100px;
 }
 .about-me .about-me-content {
   font-family: "Open Sans", sans-serif;
@@ -258,7 +287,15 @@ body {
   font-weight: 300;
   font-size: 1.125rem;
   box-shadow: var(--shadow);
-  padding: 0.3rem 0.5rem;
+  width: 100%;
+  max-width: 300px;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-me .about-me__profile__contact img {
+  margin-right: 1rem;
 }
 .about-me .about-me__profile-social-networks {
   display: flex;
@@ -298,6 +335,7 @@ body {
   text-align: center;
   font-family: Montserrat, sans-serif;
   font-weight: 300;
+  font-size: 1.25rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
