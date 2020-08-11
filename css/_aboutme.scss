@@ -2,6 +2,7 @@
   transform: skew(0deg, -5deg);
   background: var(--primary);
   @include section-container;
+  padding-bottom: 0rem;
   .about-me-content {
     font-family: "Open Sans", sans-serif;
     padding: 1rem;
@@ -54,6 +55,7 @@
       span {
         font-family: Montserrat, sans-serif;
         font-size: 1.25rem;
+        margin-top: 0.5rem;
       }
       display: flex;
       flex-direction: column;
@@ -61,7 +63,8 @@
       justify-content: center;
       align-items: center;
       img {
-        width: 3rem;
+        width: 2.5rem;
+        height: 2.5rem;
       }
     }
   }

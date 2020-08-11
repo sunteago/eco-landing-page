@@ -42,6 +42,8 @@
     border-radius: 100%;
     width: 30vw;
     height: 30vw;
+    max-width: 170px;
+    max-height: 170px;
     overflow: hidden;
     img {
       object-fit: cover;

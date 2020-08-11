@@ -1,10 +1,13 @@
 .footer {
   color: var(--white);
   background-color: var(--primary-darker);
-  position: relative;
-  z-index: 20;
-  @include section-container;
-  padding-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+  padding: 7rem 2rem 2rem 2rem;
+  margin-top: -5rem;
   div {
     h2 {
       text-align: center;
@@ -12,14 +15,4 @@
       font-weight: 300;
     }
   }
-}
-
-body::after {
-  content: "";
-  background: var(--primary-darker);
-  height: 100px;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  bottom: -26px;
 }

@@ -38,6 +38,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  max-width: 50px;
 }
 .hamburger-icon div {
   margin-bottom: 8px;
@@ -98,6 +99,8 @@ body {
   border-radius: 100%;
   width: 30vw;
   height: 30vw;
+  max-width: 170px;
+  max-height: 170px;
   overflow: hidden;
 }
 .header-avatar .header-avatar__circle img {
@@ -202,6 +205,7 @@ body {
   padding: 4rem 0 8rem 0;
   transform: skew(0deg, 5deg);
   margin-top: -4rem;
+  padding-bottom: 0rem;
 }
 .about-me > div {
   transform: skew(0deg, -5deg);
@@ -265,38 +269,28 @@ body {
 .about-me .about-me__profile-social-networks div span {
   font-family: Montserrat, sans-serif;
   font-size: 1.25rem;
+  margin-top: 0.5rem;
 }
 .about-me .about-me__profile-social-networks div img {
-  width: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .footer {
   color: var(--white);
   background-color: var(--primary-darker);
-  position: relative;
-  z-index: 20;
-  padding: 4rem 0 8rem 0;
-  transform: skew(0deg, 5deg);
-  margin-top: -4rem;
-  padding-bottom: 2rem;
-}
-.footer > div {
-  transform: skew(0deg, -5deg);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+  padding: 7rem 2rem 2rem 2rem;
+  margin-top: -5rem;
 }
 .footer div h2 {
   text-align: center;
   font-family: Montserrat, sans-serif;
   font-weight: 300;
-}
-
-body::after {
-  content: "";
-  background: var(--primary-darker);
-  height: 100px;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  bottom: -26px;
 }
 
 /*# sourceMappingURL=styles.css.map */
