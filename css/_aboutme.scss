@@ -1,0 +1,68 @@
+.about-me {
+  transform: skew(0deg, -5deg);
+  background: var(--primary);
+  @include section-container;
+  .about-me-content {
+    font-family: "Open Sans", sans-serif;
+    padding: 1rem;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .about-me__profile-image {
+      text-align: center;
+      margin-bottom: 2rem;
+      img {
+        box-shadow: var(--shadow);
+        max-width: 70%;
+      }
+    }
+  }
+  .section-title {
+    color: var(--white);
+    span {
+      background-color: var(--secondary);
+      padding: 0 0.5rem;
+      box-shadow: var(--shadow);
+    }
+    margin-bottom: 2rem;
+  }
+  .about-me__profile-about {
+    text-align: center;
+    padding: 0 2rem;
+    font-size: 1.3rem;
+    margin: 0.5rem;
+    &:last-of-type {
+      margin-bottom: 2rem;
+    }
+  }
+  .about-me__profile__contact {
+    font-family: Montserrat, sans-serif;
+    background: var(--secondary);
+    margin: 0.5rem;
+    font-weight: 300;
+    font-size: 1.125rem;
+    box-shadow: var(--shadow);
+    padding: 0.3rem 0.5rem;
+  }
+  .about-me__profile-social-networks {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    div {
+      margin: 2rem;
+      span {
+        font-family: Montserrat, sans-serif;
+        font-size: 1.25rem;
+      }
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 3rem;
+      }
+    }
+  }
+}

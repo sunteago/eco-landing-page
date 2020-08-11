@@ -1,9 +1,11 @@
 :root {
-  --primary: #174666;
-  --primary-transparent: #174666d7;
+  --primary: #2e4a5f;
+  --primary-transparent: #2e4a5fd7;
+  --primary-darker: #233848;
   --secondary: #c65f5f;
   --white: #fbfdff;
   --black-transparent: #0610189d;
+  --shadow: 2px 2px 2px 2px var(--black-transparent);
 }
 
 *,
@@ -18,6 +20,12 @@ body {
   font-family: Montserrat, sans-serif;
   background-color: var(--white);
   background-image: url("../assets/imgs/debut-light.png");
+  position: relative;
+}
+
+.section-title {
+  font-family: "Open Sans";
+  font-size: 3.5rem;
 }
 
 .hamburger-icon {
@@ -126,22 +134,169 @@ body {
   font-size: 2rem;
   cursor: pointer;
   margin-top: 2rem;
-  box-shadow: 2px 2px 2px 2px var(--black-transparent);
+  box-shadow: var(--shadow);
 }
 
 .skills {
   background-color: var(--white);
   background-image: url("../assets/imgs/debut-light.png");
   transform-origin: top right;
-  padding: 4rem 1rem 8rem 1rem;
+  z-index: 1;
+  padding: 4rem 0 8rem 0;
   transform: skew(0deg, 5deg);
   margin-top: -4rem;
-  z-index: 1;
+}
+.skills > div {
+  transform: skew(0deg, -5deg);
 }
 .skills .skills-content {
-  transform: skew(0deg, -5deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: "Open Sans", sans-serif;
   text-align: center;
+  color: var(--primary);
+}
+.skills .section-title {
+  margin-bottom: 4rem;
+}
+.skills .section-title span {
+  color: var(--white);
+  background-color: var(--secondary);
+  padding: 0 0.5rem;
+  box-shadow: var(--shadow);
+}
+.skills .skills-skill {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+.skills .skills-skill:nth-of-type(2) .skills-skill__block {
+  align-self: flex-start;
+}
+.skills .skills-skill .skills-skill__block {
+  display: inline-flex;
+  align-self: flex-end;
+  padding: 0 1rem;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary);
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+.skills .skills-skill .skills-skill__block:nth-of-type(2) div {
+  order: 1;
+}
+.skills .skills-skill .skills-skill__block h3 {
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: normal;
+}
+.skills .skills-skill .skills-skill__details {
+  font-size: 1.5rem;
+}
+
+.about-me {
+  transform: skew(0deg, -5deg);
+  background: var(--primary);
+  padding: 4rem 0 8rem 0;
+  transform: skew(0deg, 5deg);
+  margin-top: -4rem;
+}
+.about-me > div {
+  transform: skew(0deg, -5deg);
+}
+.about-me .about-me-content {
+  font-family: "Open Sans", sans-serif;
+  padding: 1rem;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-me .about-me-content .about-me__profile-image {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.about-me .about-me-content .about-me__profile-image img {
+  box-shadow: var(--shadow);
+  max-width: 70%;
+}
+.about-me .section-title {
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+.about-me .section-title span {
+  background-color: var(--secondary);
+  padding: 0 0.5rem;
+  box-shadow: var(--shadow);
+}
+.about-me .about-me__profile-about {
+  text-align: center;
+  padding: 0 2rem;
+  font-size: 1.3rem;
+  margin: 0.5rem;
+}
+.about-me .about-me__profile-about:last-of-type {
+  margin-bottom: 2rem;
+}
+.about-me .about-me__profile__contact {
+  font-family: Montserrat, sans-serif;
+  background: var(--secondary);
+  margin: 0.5rem;
+  font-weight: 300;
+  font-size: 1.125rem;
+  box-shadow: var(--shadow);
+  padding: 0.3rem 0.5rem;
+}
+.about-me .about-me__profile-social-networks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about-me .about-me__profile-social-networks div {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.about-me .about-me__profile-social-networks div span {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.25rem;
+}
+.about-me .about-me__profile-social-networks div img {
+  width: 3rem;
+}
+
+.footer {
+  color: var(--white);
+  background-color: var(--primary-darker);
+  position: relative;
+  z-index: 20;
+  padding: 4rem 0 8rem 0;
+  transform: skew(0deg, 5deg);
+  margin-top: -4rem;
+  padding-bottom: 2rem;
+}
+.footer > div {
+  transform: skew(0deg, -5deg);
+}
+.footer div h2 {
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+}
+
+body::after {
+  content: "";
+  background: var(--primary-darker);
+  height: 100px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: -26px;
 }
 
 /*# sourceMappingURL=styles.css.map */

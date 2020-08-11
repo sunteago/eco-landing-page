@@ -1,9 +1,11 @@
 :root {
-  --primary: #174666;
-  --primary-transparent: #174666d7;
+  --primary: #2e4a5f;
+  --primary-transparent: #2e4a5fd7;
+  --primary-darker: #233848;
   --secondary: #c65f5f;
   --white: #fbfdff;
   --black-transparent: #0610189d;
+  --shadow: 2px 2px 2px 2px var(--black-transparent);
 }
 
 *,
@@ -18,9 +20,26 @@ body {
   font-family: Montserrat, sans-serif;
   background-color: var(--white);
   background-image: url("../assets/imgs/debut-light.png");
+  position: relative;
+}
+
+.section-title {
+  font-family: "Open Sans";
+  font-size: 3.5rem;
+}
+
+@mixin section-container {
+  padding: 4rem 0 8rem 0;
+  transform: skew(0deg, 5deg);
+  margin-top: -4rem;
+  > div {
+    transform: skew(0deg, -5deg);
+  }
 }
 
 @import "nav";
 @import "header";
 @import "presentation";
 @import "skills";
+@import "aboutme";
+@import "footer";
